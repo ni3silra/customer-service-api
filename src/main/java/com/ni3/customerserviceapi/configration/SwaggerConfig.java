@@ -27,7 +27,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiDetails(){
         return new ApiInfo(
-                "Hotel Management API",
+                "Customer Service API",
                 "customer-service-api",
                 "1.0",
                 "Free to use",
