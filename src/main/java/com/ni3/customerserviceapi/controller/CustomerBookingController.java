@@ -4,6 +4,7 @@ import com.ni3.customerserviceapi.model.Customer;
 import com.ni3.customerserviceapi.model.HotelRoom;
 import com.ni3.customerserviceapi.service.CustomerBookingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 public class CustomerBookingController {
 
     @Autowired
+    @Qualifier("dbService")
     CustomerBookingService customerBookingService;
 
     // GET ALL CUSTOMER
@@ -28,7 +30,7 @@ public class CustomerBookingController {
     }
     // GET HOTEL BY CUSTOMER
     @GetMapping("/customer/{customerID}")
-    public HotelRoom getHotelRoomByCustomer(@PathVariable String customerID){
+    public int getHotelRoomByCustomer(@PathVariable String customerID){
         return customerBookingService.getHotelRoomByCustomer(customerID);
     }
 

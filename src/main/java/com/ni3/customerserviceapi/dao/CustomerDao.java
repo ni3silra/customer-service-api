@@ -22,7 +22,7 @@ public class CustomerDao {
         customerList = new ArrayList<>();
 
         for (int i = 0; i < 5; i++)
-            customerList.add(new Customer(customerID[i],customerName[i], new HotelRoom()));
+            customerList.add(new Customer(customerID[i],customerName[i], 0));
 
     }
 

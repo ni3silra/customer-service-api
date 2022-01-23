@@ -1,15 +1,22 @@
 package com.ni3.customerserviceapi.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Customer {
+    @Id
     private String customerID;
     private String customerName;
-    private HotelRoom room;
+    private int roomID;
 
-    public Customer(String customerID, String customerName, HotelRoom room) {
+    public Customer() {
+    }
+
+    public Customer(String customerID, String customerName, int roomID) {
         this.customerID = customerID;
         this.customerName = customerName;
-        this.room = room;
+        this.roomID = roomID;
     }
 
     public String getCustomerID() {
@@ -28,11 +35,11 @@ public class Customer {
         this.customerName = customerName;
     }
 
-    public HotelRoom getRoom() {
-        return room;
+    public int getRoom() {
+        return roomID;
     }
 
-    public void setRoom(HotelRoom room) {
-        this.room = room;
+    public void setRoom(int roomID) {
+        this.roomID = roomID;
     }
 }

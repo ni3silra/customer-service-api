@@ -3,9 +3,14 @@ package com.ni3.customerserviceapi.model;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 @ApiModel(description = "Details About Hotel Room")
 public class HotelRoom {
 
+    @Id
     @ApiModelProperty(notes = "The unique id of hotel room")
     private int hotelId;
 
